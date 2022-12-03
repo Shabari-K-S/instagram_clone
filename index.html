@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #fafafa;
+            font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-seri;
+        }
+        input{
+            all: unset;
+            font-size:12px;
+            padding: 9px 0px 7px 8px;
+            height: 36px;
+            width:258px;
+            border:1px solid rgb(208 208 208);
+            background-color: #fafafa;
+            border-radius: 5px;
+            display: flex;
+            flex: 1px 0 auto;
+            flex-wrap: wrap;
+            margin: 7px;
+            text-align: left;
+            color: rgb(38 38 38);
+        }
+
+        .login-with-facebook{
+            color:#385185;
+            font-family: apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-seri;
+            font-size: 15px;
+            display: flex;
+            margin: 5px;
+            padding :10px;
+            align-items: center;
+            justify-content: center;
+        }
+        .login-btn button{
+            margin-top: 8px;
+            border: none;
+            display: block;
+            color: #ffffff;
+            padding: 7px;
+            width: 268px;
+            height: 36px;
+            background-color: rgba(0,149,246,0.3);
+            border-radius: 5px;
+            font-style: bolder;
+        }
+        .or-label{
+            display:flex;
+            flex-wrap: wrap;
+            padding-top:20px;
+            flex-direction: row; 
+        }
+        .login-with-facebook .btn-fb{
+            margin: 5px;
+            text-decoration: bold;
+            font-size: 15px;
+            font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-weight: 600;
+        }
+        .line-in-r{
+            border: 0.1px transparent;
+            margin-left: 5px;
+            margin-right: 5px;
+            flex-shrink: 1;
+            flex-grow: 1;
+            top: 0.45em;
+            background-color: #dbdbdb;
+            height:1px;
+            position: relative;
+            width: 80px;
+        }
+        .dont-have-acc{
+            border: 1px solid lightgray;
+
+        }
+        .store{
+            height: 40px;
+            margin-top: 25px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .login-box{
+            margin-top: 40px;
+            padding-top: 4px;
+        }
+        .hide-show{
+            display: unset;
+            position: absolute;
+            align-items:left;
+            cursor: pointer;
+            font-weight:600;
+            padding-top: 4px;
+            padding-left: 80px;
+        }
+        .eye{
+            align-items:left;
+        }
+        #hide{
+            display: none;
+        }
+        @media screen(width:640px) {
+            .input-box input{
+                width:50%;
+            }
+            .login-box{
+                width:75%;
+                padding: 50%;
+            }
+            
+        }
+    </style>
+    <script>
+        function myfunction(){
+            var x = document.getElementById('pass')
+            var y = document.getElementById('hide')
+            var z = document.getElementById('show')
+
+            if(x.type === 'password'){
+                x.type = 'text';
+                y.style.display = "block";
+                z.style.display = "none"
+            }
+            else{
+                x.type = 'password';
+                y.style.display = "none";
+                z.style.display = "block"
+            }
+        }
+    </script>
+</head>
+<body style="backgroud-color: #fafafa; height: 100vh;">
+    <div class="login-box">
+    <center>    
+        <div 
+            class="login-box-1" 
+            style="
+                margin-top: 50px;
+                width:320px;
+                border: 1px solid rgba(219 219 219);
+                background-color: white;
+                padding-top: 50px;
+                padding-left: 10px;
+                padding-bottom: 40px;
+                padding-right: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+        ">
+            <div class="logo">
+                <i 
+                    data-visualcompletion="css-img" 
+                    aria-label="Instagram" 
+                    class="" 
+                    role="img" 
+                    style="
+                        background-image: url(&quot;https://static.cdninstagram.com/rsrc.php/v3/yi/r/ZFtnMBJnHU_.png&quot;); 
+                        background-position: 0px -554px; 
+                        background-size: auto; 
+                        width: 175px; 
+                        height: 51px; 
+                        background-repeat: no-repeat; 
+                        display: inline-block;
+                        margin-bottom: 10px;
+                "></i>
+            </div>
+            <div class="input-boxes" >
+                <input type="text" class="username" placeholder="Phone number, username or email address" />
+                <div class="eye">
+                    <span class="hide-show" onclick="myfunction()">
+                        <p id="show">Show</p> 
+                        <p id="hide">Hide</p>
+                    </span>
+                </div>
+                    <input type="password" class="usrpasswd" placeholder="Password" id="pass"/>
+            </div>
+            <div class="login-btn">
+                <button> Log in</button>
+            </div>
+            <div class="or-label" />
+            <div class="line-in-r"/></div>
+                <div class="OR" style="color:#8E8E8E"/>
+                    OR
+                </div>
+                <div class="line-in-r"/></div>
+            </div>
+            <div class="login-with-facebook">
+                <img 
+                    src="facebook-logo.png" 
+                    alt="facebook" 
+                    style="
+                        height:18px;
+
+                ">
+                    <a class="btn-fb" style="cursor:pointer">Login using Facebook</a>
+            </div>
+            <div class="forget"> 
+                <a href="#" style="font-size:14px; text-decoration:none; color:#00376B"> Forgetten your password? </a>
+            </div>
+        </div>
+        <div class="dont-hav-acc" style="border:1px solid rgb(219 219 219);background-color: white; padding:15px; font-size:16px;margin-top: 12px;width:307px;">
+            Don't have an account?
+            <a href="#" style="text-decoration:none; color:#0095f6"> Sign Up </a>
+        </div>
+        <div style="font-size:15px;margin-top:17px;">
+            Get an app.
+        </div>
+        <div class="appinstore">
+            <img src="appstore.png" alt="appstore" class="store" style="cursor:pointer">
+            <img src="playstore.png" alt="playstore" class="store" style="cursor:pointer">
+        </div>
+    </center>
+    </div>
+</body>
+</html>
